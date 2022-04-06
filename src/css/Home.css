@@ -27,7 +27,7 @@
 
 .navbox .rightside {
     display: flex;
-    flex-direction: row;
+    flex-direction: row;   
 }
 
 .navbox .rightside .navlinks {
@@ -60,6 +60,27 @@
     color: #000;
 }
 
+.navbox .rightside .relative {
+    position: relative;
+}
+
+.navbox .rightside .no-of-products {
+    background: #f57224;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 600;
+    padding: 2px;
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    position: absolute;
+    top: -5px;
+    right: -9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
 .logout-btn {
     padding: 5px;
     border-radius: 3px;
@@ -71,4 +92,10 @@
     border: hidden;
     background-color: #2eca8b;
     margin-left: 10px;
+}
+
+.product-card:hover{
+    -ms-transform: scale(1.2); /* IE 9 */
+  -webkit-transform: scale(1.2); /* Safari 3-8 */
+  transform: scale(1.2);
 }

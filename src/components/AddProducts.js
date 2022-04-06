@@ -13,6 +13,7 @@ const AddProducts = () => {
 
     const productImgHandler = (e) => {
         let selectedFile = e.target.files[0];
+        
         if(selectedFile && types.includes(selectedFile.type)) {
             setProductImg(selectedFile);
             setError('');
@@ -55,7 +56,7 @@ const AddProducts = () => {
     return (
         <div className='container'>
         <br/>
-        <h2>ADD PRODUCTS</h2>
+        <h2 style={{textAlign: 'center'}}>ADD PRODUCTS</h2>
         <br/>
         <form autoComplete='off' className='form-group' onSubmit={addProduct}>
             <label htmlFor='product-name'>Product Name</label>
@@ -77,7 +78,7 @@ const AddProducts = () => {
              />
             <br/>
             <label htmlFor='product-img'>Product Image</label>
-            <input className='form-control' type='file' onChange={productImgHandler} id='file'/>
+            <input className='form-control' type='file' required onChange={productImgHandler} id='file' multiple/>
             <br/>
             <div className="d-flex justify-content-center">
                 <button type='submit' className="btn btn-success">ADD</button>
